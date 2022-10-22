@@ -13,31 +13,31 @@ for($i = 1; $i <= $testNumber; $i++){
     $temp2 = $doors;
 
     //choose random door
-    $choice = $doors[array_rand($doors,1)];
+    $chosen = $doors[array_rand($doors,1)];
 
     //choose random door for car
     $car =  $doors[array_rand($doors,1)];
 
-    //goat door can not be choice or car door so we remove them to show exactly goat door
-    $temp = remove($choice,$temp);
+    //goat door can not be chosen or car door, so we remove them to show exactly goat door
+    $temp = remove($chosen,$temp);
     $temp = remove($car,$temp);
 
-    //goat door is not car door or not chosen door if choice and car door is equal we will choose randomly
+    //goat door is not car door or chosen door, if chosen and car door is equal we will choose randomly
     $goat = $temp[array_rand($temp,1)];
 
-    //If you want to test not change the door possibility comment following code block
+    //If you don't want to change the door, comment following code block
     for($j = 0; $j < count($doors); $j++){      
-        if($temp2[$j] != $choice && $temp2[$j] != $goat){   //check unselected door to change your door
-            $choice = $temp2[$j];
+        if($temp2[$j] != $chosen && $temp2[$j] != $goat){   //check unselected door to change your door
+            $chosen = $temp2[$j];
              break;
         }
     }
 
-    //we need to remove goat from the doors
+    //we need to remove goat door
     $temp2 = remove($goat,$temp2);
 
-    //if choice door is correct we will win a car
-    if($car == $choice){
+    //if chosen door is correct we will win a car
+    if($car == $chosen){
         $winningCounter++;
     } else {
         $losingCounter++;       
