@@ -2,7 +2,7 @@
 
                 //!!!!!!!!!!!!!!!!!THE CODE ASSUMES THAT YOU WILL CHANGE YOUR DOOR!!!!!!!!!!!!!!!!!!!!
 $doors = [1,2,3];
-$testNumber = 10000;
+$testNumber = 1000000;
 
 $winningCounter = 0;
 $losingCounter = 0;
