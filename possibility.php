@@ -51,12 +51,12 @@ echo "probability of winning the car : %".round($winningCounter/$testNumber*100,
 echo "probability of losing the car: %".round($losingCounter/$testNumber*100,1)."</br>";
 
 
- function remove($del_val,$temp){
-    $key = array_search($del_val, $temp);
+ function remove($del_val,$arr){
+    $key = array_search($del_val, $arr);
     if (false !== $key) {
-        unset($temp[$key]);
+        unset($arr[$key]);
     }
-    return $temp;
+    return $arr;
 }
 
 
